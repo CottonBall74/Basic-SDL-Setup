@@ -17,9 +17,9 @@ int main(int argc, char* argv[])
     game.init("SetupSDL", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, _WINDOW_WIDTH_, _WINDOW_HEIGHT_);
 
     // creating a texture
-    SDL_Texture* plane = game.loadTexture("assets/sprites/Hii.png");
+    SDL_Texture* hi = game.loadTexture("assets/sprites/Hii.png");
     // applying it and making an Object
-    Object plane1(plane, Vec2F(_WINDOW_WIDTH_ / 2, _WINDOW_HEIGHT_ / 2), Vec2I(1000, 1000), _WINDOW_WIDTH_ / 5, _WINDOW_HEIGHT_ / 5);
+    Object hii(hi, Vec2F(_WINDOW_WIDTH_ / 2, _WINDOW_HEIGHT_ / 2), Vec2I(1000, 1000), _WINDOW_WIDTH_ / 5, _WINDOW_HEIGHT_ / 5);
     
     // the main gameloop
     while(game.running())
@@ -28,7 +28,7 @@ int main(int argc, char* argv[])
         game.handleEvents();
 
         game.clearWindow();
-        game.render(plane1);
+        game.render(hii);
         game.renderWindow();
     }
 
